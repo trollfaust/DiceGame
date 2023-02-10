@@ -36,6 +36,12 @@ public class Dice : MonoBehaviour
 
     public void ChangeFaceColor(FACECOLOR newColor)
     {
+        if (newColor == FACECOLOR.swap)
+        {
+            newColor = diceConfig.currentFace.color + 1;
+            newColor = (newColor == FACECOLOR.swap) ? FACECOLOR.blue : newColor;
+        }
+
         DieFace newFace = DiceManager.Instance.ChangeFaceColor(diceConfig.currentFace, newColor);
         diceConfig.faces[System.Array.IndexOf<DieFace>(diceConfig.faces, diceConfig.currentFace)] = newFace;
         SetFace(newFace);

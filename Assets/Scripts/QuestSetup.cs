@@ -28,9 +28,9 @@ public class QuestSetup : MonoBehaviour
 
     public void SetupQuests()
     {
-        quests.Add(new Quest("Quest 1", "", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.none, 1, FACECOLOR.blue), new SlotConfig(2, FACECOLOR.blue) }, () => {  } ));
-        quests.Add(new Quest("Quest 2", "", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.none, 2, FACECOLOR.red), new SlotConfig(2, FACECOLOR.blue) }, () => {  }));
-        quests.Add(new Quest("Quest 3", "", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.none, 3, FACECOLOR.red), new SlotConfig(2, FACECOLOR.blue) }, () => {  }));
+        quests.Add(new Quest("Quest 1", "", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.none, 1, FACECOLOR.swap), new SlotConfig(2, FACECOLOR.blue) }, () => {  } ));
+        quests.Add(new Quest("Quest 2", "", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.none, 2, FACECOLOR.swap), new SlotConfig(2, FACECOLOR.blue) }, () => {  }));
+        quests.Add(new Quest("Quest 3", "", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.none, 3, FACECOLOR.swap), new SlotConfig(2, FACECOLOR.blue) }, () => {  }));
         quests.Add(new Quest("Dice Quest", "Spawns new Dice", QUESTDIFFICULTY.easy, new SlotConfig[] { new SlotConfig(0, FACECOLOR.red), new SlotConfig(2, FACECOLOR.blue) }, () => { 
             DiceManager.Instance.SpawnDice(new DiceConfig(new DieFace[] {
                 DiceSetup.Instance.allFaces[1], DiceSetup.Instance.allFaces[2], DiceSetup.Instance.allFaces[2], DiceSetup.Instance.allFaces[2], DiceSetup.Instance.allFaces[2], DiceSetup.Instance.allFaces[3] 

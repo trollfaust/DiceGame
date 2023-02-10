@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public enum FACECOLOR { none, blue, red }
+public enum FACECOLOR { none, blue, red, swap }
 
 public class SlotConfig
 {
