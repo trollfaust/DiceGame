@@ -19,6 +19,7 @@ public class Tooltip : MonoBehaviour
 
     public Animator animator;
     public Image[] faceImages;
+    public float tooltipDelay = 3f;
 
     private Coroutine coroutine;
 
@@ -32,13 +33,13 @@ public class Tooltip : MonoBehaviour
         {
             StopCoroutine(coroutine);
         }
-        coroutine = StartCoroutine(Delay());
+        coroutine = StartCoroutine(Delay(tooltipDelay));
     }
 
-    IEnumerator Delay()
+    IEnumerator Delay(float tooltipDelay)
     {
         animator.SetBool("FadeIn", true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(tooltipDelay);
         animator.SetBool("FadeIn", false);
     }
 
