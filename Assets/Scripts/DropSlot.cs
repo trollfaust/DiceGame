@@ -9,11 +9,12 @@ public class DropSlot : MonoBehaviour, IDropHandler
 {
     private SlotConfig myConfig;
     public TextMeshProUGUI valueText;
-    public Sprite[] sprites;
-    public Image image;
+    public Sprite[] backgroundSprites;
+    public Sprite[] colorSwitchSprites;
+    public Image backgroundImage;
+    public Image colorSwitchImage;
     public GameObject upArrow;
     public GameObject downArrow;
-    public GameObject colorSwap;
 
     [HideInInspector]
     public Draggable myDraggable;
@@ -23,11 +24,11 @@ public class DropSlot : MonoBehaviour, IDropHandler
     {
         upArrow.SetActive(false);
         downArrow.SetActive(false);
-        colorSwap.SetActive(false);
+        colorSwitchImage.gameObject.SetActive(false);
 
         myConfig = config;
         valueText.text = (myConfig.minValue > 0) ? myConfig.minValue.ToString() + "+" : "";
-        image.sprite = sprites[(int)myConfig.color];
+        backgroundImage.sprite = backgroundSprites[(int)myConfig.color];
         if (myConfig.changeAmount > 0)
         {
             upArrow.SetActive(true);
@@ -41,7 +42,8 @@ public class DropSlot : MonoBehaviour, IDropHandler
 
         if (myConfig.changeColor != FACECOLOR.none)
         {
-            colorSwap.SetActive(true);
+            colorSwitchImage.sprite = colorSwitchSprites[(int)myConfig.changeColor - 1];
+            colorSwitchImage.gameObject.SetActive(true);
         }
 
         questCard = gameObject.GetComponentInParent<QuestCard>();

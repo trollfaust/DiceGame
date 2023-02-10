@@ -53,14 +53,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueText: {fileID: 7610423174790266658}
-  sprites:
+  backgroundSprites:
   - {fileID: 21300000, guid: b80bbacb379f5ca41875707e805f1294, type: 3}
   - {fileID: 21300000, guid: 5e1fe258b11437744ab758274bfd9b28, type: 3}
   - {fileID: 21300000, guid: c3829ab23c6147f48a16e612fe3d6b09, type: 3}
-  image: {fileID: 1066655939579967639}
+  colorSwitchSprites:
+  - {fileID: 21300000, guid: f19f70cc744a3d74cad1098bb8a514b1, type: 3}
+  - {fileID: 21300000, guid: 09d46860b70e0ba4ba616a1d79c2446a, type: 3}
+  - {fileID: 21300000, guid: 7e247c9dedd3f114d8c1808df27aece9, type: 3}
+  backgroundImage: {fileID: 1066655939579967639}
+  colorChangeImage: {fileID: 494166755570585864}
   upArrow: {fileID: 4919027071429783663}
   downArrow: {fileID: 2485031333222873741}
-  colorSwap: {fileID: 7392623616659479188}
   myDraggable: {fileID: 0}
 --- !u!222 &1066655938946404729
 CanvasRenderer:
