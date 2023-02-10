@@ -45,14 +45,12 @@ public class QuestCard : MonoBehaviour
         quest.Complete();
         QuestManager.Instance.QuestDone(quest);
 
-        yield return new WaitForSeconds(0.2f);
-
         foreach (DropSlot slot in mySlots)
         {
             slot.OnComplete();
         }
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
 
         QuestManager.Instance.DrawCard();
         Destroy(gameObject);

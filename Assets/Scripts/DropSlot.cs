@@ -101,6 +101,12 @@ public class DropSlot : MonoBehaviour, IDropHandler
             dice.ChangeFaceColor(myConfig.changeColor);
         }
 
+        StartCoroutine(OnCompleteDelay(dice));
+    }
+
+    IEnumerator OnCompleteDelay(Dice dice)
+    {
+        yield return new WaitForSeconds(0.4f);
         myDraggable.SetToHomeSlot();
         dice.Roll();
     }

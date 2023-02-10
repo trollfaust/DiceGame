@@ -37,8 +37,6 @@ public class QuestSetup : MonoBehaviour
             }));
         }));
 
-
-
         QuestManager.Instance.DrawCards(3);
     }
 
