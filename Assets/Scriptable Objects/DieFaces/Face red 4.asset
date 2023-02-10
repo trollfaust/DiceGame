@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479d353c848f9754a919d7e70b2600ee, type: 3}
+  m_Name: Face red 4
+  m_EditorClassIdentifier: 
+  value: 4
+  sprite: {fileID: 21300000, guid: 3a7fc9870ca48054083f702e8d5eadf1, type: 3}
+  color: 2
